@@ -64,8 +64,8 @@ def get_points(s, number_c):
 
 
 if __name__ == "__main__":
-    username = os.environ["HOSTLOC_USERNAME"]
-    password = os.environ["HOSTLOC_PASSWORD"]
+    username = os.environ["RIGHT_USERNAME"]
+    password = os.environ["RIGHT_PASSWORD"]
 
     # 分割用户名和密码为列表
     user_list = username.split(",")
