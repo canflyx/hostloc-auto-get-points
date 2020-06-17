@@ -21,6 +21,6 @@ jobs:
       run: python -m pip install --upgrade requests
     - name: 'Get points'
       env:
-        HOSTLOC_USERNAME: ${{ secrets.RIGHT_USERNAME }}
-        HOSTLOC_PASSWORD: ${{ secrets.RIGHT_PASSWORD }}
+        RIGHT_USERNAME: ${{ secrets.RIGHT_USERNAME }}
+        RIGHT_PASSWORD: ${{ secrets.RIGHT_PASSWORD }}
       run: python right_get_points.py
