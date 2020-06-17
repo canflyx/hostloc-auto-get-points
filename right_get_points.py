@@ -11,7 +11,7 @@ def randomly_gen_uspace_url():
     # 访问小黑屋用户空间不会获得积分、生成的随机数可能会重复，这里多生成两个链接用作冗余
     for i in range(12):
         uid = random.randint(10000, 35000)
-        url = "https://https://www.right.com.cn/forum/space-uid-{}.html".format(str(uid))
+        url = "https://www.right.com.cn/forum/space-uid-{}.html".format(str(uid))
         url_list.append(url)
     return url_list
 
@@ -38,7 +38,7 @@ def check_login_status(s, number_c):
     res = s.get(test_url)
     res.encoding = "utf-8"
     test_title = re.findall("<title>.*?</title>", res.text)
-    if test_title[0] != "<title>个人资料 -  全球主机交流论坛 -  Powered by Discuz!</title>":
+    if test_title[0] != "<title>个人资料 -  恩山无线论坛 -  Powered by Discuz!</title>":
         print("第" + str(number_c) + "个帐户登录失败！")
         return False
     else:
