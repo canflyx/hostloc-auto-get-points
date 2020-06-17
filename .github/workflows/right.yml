@@ -4,8 +4,8 @@ on:
   push:
     branches: 
       - master
-  schedule:
-    - cron: '0 17 * * *'
+#  schedule:
+#    - cron: '0 17 * * *'
 
 jobs:
   get_points:
@@ -21,6 +21,6 @@ jobs:
       run: python -m pip install --upgrade requests
     - name: 'Get points'
       env:
-        HOSTLOC_USERNAME: ${{ secrets.HOSTLOC_USERNAME }}
-        HOSTLOC_PASSWORD: ${{ secrets.HOSTLOC_PASSWORD }}
+        HOSTLOC_USERNAME: ${{ secrets.RIGHT_USERNAME }}
+        HOSTLOC_PASSWORD: ${{ secrets.RIGHT_PASSWORD }}
       run: python right_get_points.py
