@@ -4,8 +4,8 @@ on:
   push:
     branches: 
       - master
-#  schedule:
-#    - cron: '0 17 * * *'
+  schedule:
+    - cron: '0 17 * * *'
 
 jobs:
   get_points:
